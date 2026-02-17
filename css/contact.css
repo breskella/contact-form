@@ -1,0 +1,109 @@
+/* الخلفية العامة */
+body {
+    background-color: hsla(0, 0%, 95%, 0.237);
+    font-family: 'Raleway', sans-serif;
+}
+
+/* التنبيهات */
+.alert {
+    margin-bottom: 10px;
+}
+
+/* عنوان الصفحة */
+h1 {
+    font-weight: 900;
+    font-size: 50px;
+    letter-spacing: -3px;
+    color: #757575;
+    text-align: center;
+}
+
+/* الفورم */
+.contact-form {
+    max-width: 450px;
+    margin: 20px auto;
+    position: relative;
+}
+
+/* حقول الإدخال */
+.contact-form .form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.contact-form .form-control {
+    padding-left: 35px;
+    padding-right: 10px;
+    height: 45px;
+}
+
+/* أيقونات الحقول */
+.contact-form .form-group i {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: #999;
+    font-size: 18px;
+}
+
+/* العلامة الحمراء للحقول المطلوبة */
+.contact-form .asterisx {
+    font-size: 25px;
+    color: rgb(211, 54, 54);
+    position: absolute;
+    right: 10px;
+    top: 6px;
+}
+
+/* textarea */
+.contact-form textarea {
+    padding-left: 35px;
+    padding-top: 12px;
+    height: 180px !important;
+}
+
+/* أيقونة textarea */
+.contact-form textarea + i {
+    top: 18px;
+}
+
+/* زر الإرسال */
+.contact-form input[type="submit"] {
+    position: relative;
+    padding-left: 45px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* أيقونة زر الإرسال */
+.contact-form .form-group .send-icon {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+
+/* تحسين بعض المارجن للحقول */
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 10px;
+}
+
+/* responsive minor fixes */
+@media (max-width: 576px) {
+    .contact-form {
+        padding: 0 15px;
+    }
+    h1 {
+        font-size: 36px;
+    }
+}
+
+.contact-form .custom-alert{
+    padding: 5px 10px;
+    display: none;
+}
+
+
