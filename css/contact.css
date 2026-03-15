@@ -1,3 +1,4 @@
+/* الخلفية العامة */
 body {
     background-color: #121212; 
     font-family: 'Raleway', sans-serif;
@@ -25,82 +26,76 @@ h1 {
     width: 100%;
     margin: 20px auto;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    border: 1px solid #333; 
+    border: 1px solid #333;
 }
 
+/* أهم جزء: الحاوية لازم تكون relative */
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
 
 .contact-form .form-control {
     background-color: #2c2c2c;
     border: 1px solid #444;
     color: #fff;
-    padding-left: 40px;
+    padding-left: 45px; /* مساحة للأيقونة */
     height: 50px;
     border-radius: 8px;
-    transition: all 0.3s ease-in-out;
+    width: 100%;
 }
 
 .contact-form .form-control:focus {
     background-color: #333;
     border-color: #28a745;
     box-shadow: none;
-    color: #fff;
+    outline: none;
 }
 
-.form-control::placeholder {
-    color: #888;
-}
-
-.contact-form .form-group i {
+/* تثبيت الأيقونات جوه الحقول */
+.form-group i:not(.fa-send) {
     position: absolute;
-    top: 16px;
     left: 15px;
-    color: #28a745; 
-    font-size: 16px;
-    z-index: 2;
+    top: 17px;
+    color: #28a745;
+    z-index: 5;
+    pointer-events: none; /* عشان ميعطلش الكتابة */
 }
 
-.contact-form .asterisx {
-    font-size: 20px;
-    color: #ff4d4d;
+/* النجمة الحمراء */
+.asterisx {
     position: absolute;
     right: 15px;
     top: 12px;
+    color: #ff4d4d;
+    font-size: 20px;
+    z-index: 5;
 }
 
-.contact-form textarea.form-control {
-    height: 150px !important;
-    padding-top: 15px;
-}
-
-.contact-form .btn-success {
+/* زر الإرسال الجديد */
+.btn-success {
     background-color: #28a745;
     border: none;
     width: 100%;
-    height: 50px;
+    height: 55px;
+    color: #fff;
     font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 10px;
+    font-weight: bold;
     border-radius: 8px;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* مسافة بين الأيقونة والكلام */
     transition: 0.3s;
+    cursor: pointer;
 }
 
-.contact-form .btn-success:hover {
+.btn-success i {
+    position: static !important; /* لغينا أي وضع قديم */
+    font-size: 18px;
+}
+
+.btn-success:hover {
     background-color: #218838;
     transform: translateY(-2px);
-}
-
-.send-icon {
-    margin-right: 10px;
-    color: #fff !important;
-    position: static !important; 
-}
-
-@media (max-width: 576px) {
-    .contact-form {
-        padding: 20px;
-        margin: 10px;
-    }
-    h1 { font-size: 32px; }
 }
